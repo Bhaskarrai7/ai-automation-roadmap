@@ -65,15 +65,28 @@ set	Yes'''
 
 #but let's try same code with lists
 
-def change_lis(my_list):
+'''def change_lis(my_list):
     my_list.clear()
 
 li=[0,9,8,7]
 
 change_lis(li)
-print(li) #--> empty list
+print(li) #--> empty list'''
 
 ''' yaha pe ek concept hai
 agar mai function ke andar my_list = [] --> this makes the local param refer to a diff list
 but
 my_list.clear(), my_list.append() --> this modifies the list object'''
+
+'''Reassigning the local parameter didn't replace the caller's variable.
+The distinction is:
+- skills.append("Python") modifies the list object.
+- skills = ["Python"] makes the local parameter refer to a different list.
+Keep this mental model: Python passes object references by assignment.
+The function gets its own parameter name referring to the supplied object;
+whether changes are visible outside depends on what you do to that object.'''
+
+#type hints
+# ---> not necessary but just makes the code look more professional
+#def count_errors(errors: list[str]) -> dict[str, int]:
+

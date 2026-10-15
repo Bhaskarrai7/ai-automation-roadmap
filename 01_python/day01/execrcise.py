@@ -49,8 +49,6 @@ def count_errors(errors):
         else:
             error_items[item] = 1
     return error_items
-    for k,v in error_items.items():
-        print(f"{k}:{v}")  
 
 ce = count_errors(errors)
 for k,v in ce.items():
